@@ -1,5 +1,4 @@
 import {Component} from 'react'
-
 import './App.css'
 
 // These are the lists used in the application. You can move them to any component needed.
@@ -277,11 +276,11 @@ class App extends Component {
   }
 
   imageClick = thumbnailUrl => {
-    const {imageUrl} = this.state
+    const {imgUrl} = this.state
     const imageValue = imagesList.filter(
       eachValue => eachValue.thumbnailUrl === thumbnailUrl,
     )
-    const {imgUrl} = imageValue[0]
+    const {imageUrl} = imageValue[0]
     if (imageUrl === imgUrl) {
       const newImgUrl =
         imagesList[Math.floor(Math.random() * imagesList.length)].imageUrl
@@ -314,7 +313,7 @@ class App extends Component {
     )
     return (
       <div className="main-container">
-        <nav className="new-bar">
+        <nav className="nav-bar">
           <img
             src="https://assets.ccbp.in/frontend/react-js/match-game-website-logo.png"
             className="top-image"
@@ -332,7 +331,7 @@ class App extends Component {
                 alt="timer"
                 className="timer-img"
               />
-              <p className="time">{time} sec </p>
+              <p className="time">{time} sec</p>
             </li>
           </ul>
         </nav>
